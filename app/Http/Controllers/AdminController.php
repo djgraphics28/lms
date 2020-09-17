@@ -10,6 +10,10 @@ use Carbon\Carbon;
 
 /* Models */
 use File;
+use App\Member;
+use App\Beneficiary;
+use App\Characterref;
+use App\EducationalBack;
 use App\Records;
 use App\Barangay;
 use App\ContactPerson;
@@ -91,6 +95,33 @@ class AdminController extends Controller
 
         return view('admin.profile', $data);
     }
+
+    public function memberProfile()
+    {
+        $data['title'] = "Member Profile";
+        $data['base_url'] = App::make("url")->to('/');
+        // $data['data'] = DB::table('user_profile')
+        //     ->join('civil_status', 'user_profile.user_civil_status', '=', 'civil_status.id')
+        //     ->join('barangays', 'user_profile.user_brgy', '=', 'barangays.id')
+        //     ->selectRaw('user_profile.id,
+        //                 user_profile.user_id,
+        //                 user_profile.user_profile_pic,
+        //                 user_profile.user_birthdate,
+        //                 user_profile.user_gender,
+        //                 user_profile.user_address,
+        //                 user_profile.user_street,
+        //                 user_profile.user_mobile_num,
+        //                 user_profile.user_phone_num,
+        //                 user_profile.user_civil_status,
+        //                 user_profile.user_brgy,
+        //                 barangays.name as brgy,
+        //                 civil_status.name as civil_status')
+        //     ->where('user_id', Auth::user()->id)->get();
+        // $data['prof_pic'] = UserProfile::where('user_id', Auth::user()->id)->select('user_profile_pic')->pluck('user_profile_pic');
+
+        return view('admin.member', $data);
+    }
+
 
     public function getSeniorCitizenPage()
     {

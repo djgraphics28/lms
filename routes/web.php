@@ -48,5 +48,7 @@ Route::post('/admin-change-password', 'AdminController@changePassword');
 Route::get('/admin-edit-user/{id}', 'AdminController@editUser');
 Route::post('/change-password', 'AdminController@changeUserPassword');
 
+
+Route::get('/member-profile', 'AdminController@memberProfile');
 /* DataTables */
 Route::get('/admin-get-records', 'AdminController@getRecordsData');
