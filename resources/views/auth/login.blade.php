@@ -10,7 +10,7 @@
 
     <div class="login-box">
         <div class="login-logo" style="margin-bottom:0px!important;">
-          <a href="{{ url('/') }}"><span style="font-size:18px;"><b>Welcome</b></span></a>
+          <a href="{{ url('/') }}"><span style="font-size:18px;"><b>SPB MULTI-PURPOSE COOPERATIVE</b></span></a>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">

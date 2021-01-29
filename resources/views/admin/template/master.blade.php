@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script> window.Laravel = { csrfToken: '{{ csrf_token() }}'} </script>
 
-    <title>{{$title}} | SCRM</title>
+    <title>{{$title}} | LMS</title>
 
     <link rel="icon" href="{{ asset('public/favicon.ico') }}" type="image/ico" />
     <!-- Tell the browser to be responsive to screen width -->
@@ -102,8 +102,8 @@
     <!-- Logo -->
     <a href="{{ url('/home') }}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini" style="font-size:14px!important;"><b>SCRM</b></span>
-      <span class="logo-lg"><b>SCRM</b></span>
+      <span class="logo-mini" style="font-size:14px!important;"><b>LMS</b></span>
+      <span class="logo-lg"><b>LMS</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -190,19 +190,19 @@
         </li>
         <li class="{{ strpos(Request::url(), 'admin-record') == true ? 'active' : '' }}">
           <a href="{{ url('/admin-record') }}">
-            <i class="fa fa-archive"></i> <span>Senior Citizen</span>
+            <i class="fa fa-archive"></i> <span>Members</span>
           </a>
         </li>
-        <li class="{{ strpos(Request::url(), 'contribution') == true ? 'active' : '' }}">
+        {{-- <li class="{{ strpos(Request::url(), 'contribution') == true ? 'active' : '' }}">
           <a href="{{ url('/admin-senior-contributions') }}">
             <i class="glyphicon glyphicon-piggy-bank"></i> <span>Senior Citizen Contribution</span>
           </a>
-        </li>
-        <li class="{{ strpos(Request::url(), 'pension') == true ? 'active' : '' }}">
+        </li> --}}
+        {{-- <li class="{{ strpos(Request::url(), 'pension') == true ? 'active' : '' }}">
           <a href="{{ url('/admin-senior-pension') }}">
             <i class="fa fa-money"></i> <span>Senior Citizen Pension</span>
           </a>
-        </li>
+        </li> --}}
         @if (Auth::user()->user_type == 1)
         <li class="{{ strpos(Request::url(), 'user') == true ? 'active' : '' }}">
           <a href="{{ url('/admin-users') }}">
